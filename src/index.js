@@ -15,8 +15,54 @@ const works = [
     title: "作ったもの",
     info: "カテゴリ",
     description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
   }
 ]
+
 
 let Profile = (props) =>{
   return(
@@ -49,11 +95,42 @@ function Test(props){
   );
 }
 
+let Content = (props) =>{
+  return (
+    // コンテンツ全体
+    <div className='album py-5 bg-light'>
+      <div className='container'>
+        <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>
+
+          {/* コンテンツの中身 */}
+          {props.works.map((work, i)=>(
+            <div className='col' key={i}>
+            <div className='card shadow-sm'>
+              <svg className="bd-placeholder-img card-img-top" width="100%" height="255" role="img" focusable="false">
+              <rect width="100%" height="100%" fill=""/>
+              <text x="40%" y="50%" fill="#eceeef" dy=".3em">{work.title}</text>
+              </svg>
+
+              <div className='card-body'>
+                <p className='card-text'>{work.description}</p>
+              </div>
+            </div>
+          </div>
+          ))}
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <main>
     <Profile/>
-    <Test works={works} />
+    <Content works={works}/>
+    </main>
   </React.StrictMode>
 );
 

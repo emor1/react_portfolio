@@ -3,7 +3,7 @@ import React from "react"
 let Profile = (props) =>{
     const PageTitle = props.content.map((data,i)=>{
       return(
-        <div className='col-lg-6 col-md-8 mx-auto'>
+        <div key={i} className='col-lg-6 col-md-8 mx-auto'>
           <h1 className="fw-light">{data.title}</h1>
           <p className='lead text-muted'>
             {data.subtitle}

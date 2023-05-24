@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Profile from './compornents/Profile';
 import Header from './compornents/header';
+import Popup from './compornents/Popup';
 import {BsRobot} from 'react-icons/bs'
 import { IconContext } from 'react-icons';
 
@@ -126,6 +127,7 @@ root.render(
     <main>
       <Header data={section}/>
       <Profile content={self_intro}/>
+        <Popup/>
       <Content works={works}/>
     </main>
   </React.StrictMode>

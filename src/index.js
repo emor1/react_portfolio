@@ -1,15 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Profile from './compornents/Profile';
+import {BsRobot} from 'react-icons/bs'
+import { IconContext } from 'react-icons';
 
 const self_intro = [
   {
     title: "Masato Portfolio",
     subtitle: "いーもりのポートフォリオだよ"
   }
+]
+
+
+const section =[
+  {
+    sectionTitle: "Home",
+    sectionLink: "#"
+  },
+  {
+    sectionTitle: "Works",
+    sectionLink: "#"
+  },
+  {
+    sectionTitle: "Skills",
+    sectionLink: "#"
+  },
+  {
+    sectionTitle: "Contact",
+    sectionLink: "#"
+  },
+  {
+    sectionTitle: "Blog",
+    sectionLink: "#"
+  },
 ]
 
 const works = [
@@ -101,43 +127,44 @@ let Header = (props) =>{
       </svg>
     )
   }
+
+    const SectionHeader = props.data.map((data,i)=>{
+      return(
+        <li className='nav-item' key={i}>
+          <a className="nav-link" href={data.sectionLink}>{data.sectionTitle}</a>
+        </li>
+      )
+    })
+
   return(
-    <div className='pheader navbar navbar-dark shadow-sm'>
-      <div className='container'>
+    <nav className='pheader navbar navbar-dark shadow-sm sticky-top'>
+        <div className='container'>
         <a href="#" className='navbar-brand d-flex align-items-center'>
           <RobotIcon w={w}/>
           <strong className='text-white'> {title}</strong>
         </a>
-        <button className='navbar-toggler' type="button" data-bs-toggle="collapse" data-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className='navbar-toggler-icon'></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">リンク１</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">リンク２</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">リンク３</a>
-              </li>
+
+        <button className="navbar-toggler" type="button"
+              data-toggle="collapse" data-target="#navbarResponsive">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+
+          <div className="collapse navbar-collapse" id="navbarResponsive">
+            <ul className='navbar-nav ml-auto'>
+              {SectionHeader}
             </ul>
           </div>
 
       </div>
-    </div>
+    </nav>
   )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header content={self_intro}/>
     <main>
+    <Header data={section}/>
     <Profile content={self_intro}/>
     <Content works={works}/>
     </main>

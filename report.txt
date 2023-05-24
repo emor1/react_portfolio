@@ -1,0 +1,44 @@
+
+
+request  *
+Severity: moderate
+Server-Side Request Forgery in Request - https://github.com/advisories/GHSA-p8p7-x288-28g6
+fix available via `npm audit fix --force`
+Will install react-scripts@5.0.1, which is a breaking change
+node_modules/request
+  request-promise-core  *
+  Depends on vulnerable versions of request
+  node_modules/request-promise-core
+    request-promise-native  >=1.0.0
+    Depends on vulnerable versions of request
+    Depends on vulnerable versions of request-promise-core
+    node_modules/request-promise-native
+
+sockjs  <0.3.20
+Severity: moderate
+Improper Input Validation in SocksJS-Node - https://github.com/advisories/GHSA-c9g6-9335-x697
+fix available via `npm audit fix --force`
+Will install react-scripts@5.0.1, which is a breaking change
+node_modules/sockjs
+
+
+
+yargs-parser  6.0.0 - 13.1.1
+Severity: moderate
+yargs-parser Vulnerable to Prototype Pollution - https://github.com/advisories/GHSA-p9pc-299p-vxgp
+fix available via `npm audit fix --force`
+Will install react-scripts@5.0.1, which is a breaking change
+node_modules/webpack-dev-server/node_modules/yargs-parser
+node_modules/yargs-parser
+  yargs  8.0.0-candidate.0 - 12.0.5
+  Depends on vulnerable versions of yargs-parser
+  node_modules/webpack-dev-server/node_modules/yargs
+  node_modules/yargs
+
+80 vulnerabilities (14 low, 19 moderate, 39 high, 8 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force

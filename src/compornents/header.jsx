@@ -1,6 +1,9 @@
 
 import React from "react"
 
+// https://zenn.dev/mkt_engr/articles/12209df0aac71a
+// 後で上を参考にメニューがいを押したら閉じるように実装する
+
 let Header = (props) =>{
     const title = "Masato Iimori Portfolio";
     const w = 30;

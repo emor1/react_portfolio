@@ -16,4 +16,12 @@ let Skills = (props)=>{
     )
 }
 
+// let PopupTest =()=> {
+//     return(
+//       <Popup  trigger={<button> Trigger</button>} modal nested>
+//       <div >Popup content here !!</div>
+//     </Popup>
+//     )
+  
+// }
 export default Skills

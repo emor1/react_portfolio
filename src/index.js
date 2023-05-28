@@ -5,11 +5,13 @@ import reportWebVitals from './reportWebVitals';
 
 import Profile from './compornents/Profile';
 import Header from './compornents/header';
-import Popup from './compornents/Popup';
+// import Popup from './compornents/Popup';
 import Skills from './compornents/Skills';
 
 import {BsRobot} from 'react-icons/bs'
 import { IconContext } from 'react-icons';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css'
 
 const self_intro = [
   {
@@ -47,43 +49,50 @@ const works = [
     title: "作ったもの",
     info: "カテゴリ",
     description: "説明",
-    date:"2022-10-26"
+    date:"2022-10-26",
+    detailed_description: "AAAAAAAAAAAAAAAAAA"
   },
   {
     title: "作ったもの",
     info: "カテゴリ",
     description: "説明",
-    date:"2022-10-26"
+    date:"2022-10-26",
+    detailed_description: "AAAAAAAAAAAAAAAAAA"
   },
   {
     title: "作ったもの",
     info: "カテゴリ",
     description: "説明",
-    date:"2022-10-26"
+    date:"2022-10-26",
+    detailed_description: "AAAAAAAAAAAAAAAAAA"
   },
   {
     title: "作ったもの",
     info: "カテゴリ",
     description: "説明",
-    date:"2022-10-26"
+    date:"2022-10-26",
+    detailed_description: "AAAAAAAAAAAAAAAAAA"
   },
   {
     title: "作ったもの",
     info: "カテゴリ",
     description: "説明",
-    date:"2022-10-26"
+    date:"2022-10-26",
+    detailed_description: "AAAAAAAAAAAAAAAAAA"
   },
   {
     title: "作ったもの",
     info: "カテゴリ",
     description: "説明",
-    date:"2022-10-26"
+    date:"2022-10-26",
+    detailed_description: "AAAAAAAAAAAAAAAAAA"
   },
   {
     title: "作ったもの",
     info: "カテゴリ",
     description: "説明",
-    date:"2022-10-26"
+    date:"2022-10-26",
+    detailed_description: "AAAAAAAAAAAAAAAAAA"
   }
 ]
 
@@ -110,20 +119,30 @@ let Content = (props) =>{
           {/* コンテンツの中身 */}
           {props.works.map((work, i)=>(
             <div className='col' key={i}>
-              <div className='card shadow-sm'>
-                <svg className="bd-placeholder-img card-img-top" width="100%" height="255" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="#364f6b"/>
-                <text x="50%" y="50%" fill="#f5f5f5" dy=".3em" >{work.title}</text>
-                </svg>
 
-{/* 後でhttps://getbootstrap.jp/docs/5.0/components/card/#image-overlaysを参考にイメージオーバーレイ実装 */}
-                <div className='card-body'>
-                  <p className='card-text'>{work.description}</p>
-                  <div className='d-flex justify-content-end'>
-                    <small className='text-muted'>Date:{work.date}</small>
+              <Popup trigger={
+                <div className='card shadow-sm'>
+                  <svg className="bd-placeholder-img card-img-top" width="100%" height="255" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#364f6b"/>
+                  <text x="50%" y="50%" fill="#f5f5f5" dy=".3em" >{work.title}</text>
+                  </svg>
+
+  {/* 後でhttps://getbootstrap.jp/docs/5.0/components/card/#image-overlaysを参考にイメージオーバーレイ実装 */}
+                  <div className='card-body'>
+                    <p className='card-text'>{work.description}</p>
+                    <div className='d-flex justify-content-end'>
+                      <small className='text-muted'>Date:{work.date}</small>
+                    </div>
                   </div>
                 </div>
-              </div>
+              }
+              modal
+              >
+                <div >
+                    Content: {work.detailed_description}
+                </div>
+              </Popup>
+
             </div>
           ))}
 
@@ -157,16 +176,18 @@ let BaseContainer=(name)=>{
 }
 
 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <main>
       <Header data={section}/>
       <Profile content={self_intro} id="top"/>
-        {/* <Popup/> */}
       <Content works={works}/>
+      {/* <PopupTest/> */}
       <Skills skill={skill}/>
-      <BaseContainer name={name}/>
+      {/* <BaseContainer name={name}/> */}
     </main>
   </React.StrictMode>
 );

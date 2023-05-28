@@ -1,0 +1,7 @@
+.popup-content {
+    margin: auto;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    width: 50%;
+    padding: 5px;
+}

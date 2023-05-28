@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 import Profile from './compornents/Profile';
 import Header from './compornents/header';
 import Popup from './compornents/Popup';
+import Skills from './compornents/Skills';
+
 import {BsRobot} from 'react-icons/bs'
 import { IconContext } from 'react-icons';
 
@@ -20,23 +22,23 @@ const self_intro = [
 const section =[
   {
     sectionTitle: "Home",
-    sectionLink: "#"
+    sectionLink: "#top"
   },
   {
     sectionTitle: "Works",
-    sectionLink: "#"
+    sectionLink: "#works"
   },
   {
     sectionTitle: "Skills",
-    sectionLink: "#"
+    sectionLink: "#skills"
   },
   {
     sectionTitle: "Contact",
-    sectionLink: "#"
+    sectionLink: "#contact"
   },
   {
     sectionTitle: "Blog",
-    sectionLink: "#"
+    sectionLink: "#blog"
   },
 ]
 
@@ -85,13 +87,24 @@ const works = [
   }
 ]
 
+const skill=[
+  {
+      name: "Skill example",
+      img: "#"
+  },
+  {
+      name: "Skill example",
+      img: "#"
+  }
+]
 
 
 let Content = (props) =>{
   return (
     // コンテンツ全体
-    <div className='album py-5 bg-light'>
+    <div className='album py-5 bg-light' id="works">
       <div className='container'>
+        <h2>Works</h2>
         <div className='row row-cols-1 row-cols-s3m-2 row-cols-md-3 g-3'>
 
           {/* コンテンツの中身 */}
@@ -120,20 +133,42 @@ let Content = (props) =>{
   )
 }
 
+const name = [
+  {
+    title: "Contact",
+    id: "contact"
+  },
+  {
+    title: "Blog",
+    id : "blog"
+  }
+]
+
+let BaseContainer=(name)=>{
+  return(
+    <div>
+      {name.name.map((content, i)=>{
+        <div className='container' id={content.id}>
+          <h2>{content.title}</h2>
+        </div>
+      })}
+    </div>
+  );
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <main>
       <Header data={section}/>
-      <Profile content={self_intro}/>
-        <Popup/>
+      <Profile content={self_intro} id="top"/>
+        {/* <Popup/> */}
       <Content works={works}/>
+      <Skills skill={skill}/>
+      <BaseContainer name={name}/>
     </main>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

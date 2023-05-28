@@ -8,8 +8,7 @@ import Header from './compornents/header';
 import Skills from './compornents/Skills';
 import Works from './compornents/Works';
 
-import {BsRobot} from 'react-icons/bs'
-import { IconContext } from 'react-icons';
+import {AiFillGithub, AiOutlineLink} from 'react-icons/ai'
 import Contents from './compornents/Contents';
 
 
@@ -113,7 +112,11 @@ let Others = (content) =>{
   return(
     <div className='container' id={other_content.id}>
       <h2>{other_content.title}</h2>
-      <a href={other_content.link}>{other_content.link_title}</a>
+      <p className='fs-5 text-body '>
+        {/* {other_content.icon} <br/> */}
+        <AiOutlineLink/>
+        <a href={other_content.link} className='text-decoration-none"'>{other_content.link_title}</a>
+      </p>
     </div>
   )
 }
@@ -128,7 +131,7 @@ root.render(
       <Profile content={self_intro} id="top"/>
       <Works works={works}/>
       <Skills skill={skill}/>
-      <Others content={{title:"Contact", link:"#", link_title: "GitHub", id:"#contact"}}/>
+      <Others content={{title:"Contact", link:"https://github.com/emor1", link_title:"GitHub", id:"#contact", icon:<AiFillGithub/>}}/>
       <Others content={{title:"Blog", link:"#", link_title: "Blog Page",id:"#blog"}}/>
     </main>
   </React.StrictMode>

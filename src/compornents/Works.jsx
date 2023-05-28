@@ -2,6 +2,11 @@ import React from "react"
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css'
 
+import {AiFillCalendar} from 'react-icons/ai'
+import {BiCategoryAlt} from 'react-icons/bi'
+
+
+
 import Contents from "./Contents";
 
 let Works = (props) =>{
@@ -27,8 +32,8 @@ let Works = (props) =>{
                   <div className='card-body'>
                     <p className='card-text'>{work.description}</p>
                     <div className='d-flex justify-content-between'>
-                      <small className='text-muted'>Category: {work.info}</small>
-                      <small className='text-muted'>Date: {work.date}</small>
+                      <small className='text-muted'><BiCategoryAlt/> Category: {work.info}</small>
+                      <small className='text-muted'><AiFillCalendar/>: {work.date}</small>
                     </div>
                   </div>
                 </div>

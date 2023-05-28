@@ -25,7 +25,7 @@ let Works = (props) =>{
                 <div className='card shadow-sm'>
                   <svg className="bd-placeholder-img card-img-top" width="100%" height="255" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
                   <rect width="100%" height="100%" fill="#364f6b"/>
-                  <text x="50%" y="50%" text-anchor="middle" fill="#f5f5f5" dy=".3em" >{work.title}</text>
+                  <text x="50%" y="50%" textAnchor="middle" fill="#f5f5f5" dy=".3em" >{work.title}</text>
                   </svg>
 
   {/* 後でhttps://getbootstrap.jp/docs/5.0/components/card/#image-overlaysを参考にイメージオーバーレイ実装 */}

@@ -9,7 +9,8 @@ import Skills from './compornents/Skills';
 import Works from './compornents/Works';
 
 import {AiFillGithub, AiOutlineLink} from 'react-icons/ai'
-import Contents from './compornents/Contents';
+import {BsRobot} from "react-icons/bs"
+import {SiBlender, SiPython, SiUnity, SiArduino, SiCplusplus, SiProcessingfoundation, SiRaspberrypi, SiJavascript, SiReact, SiCsharp, SiBootstrap, SiTwitter} from "react-icons/si"
 
 
 const self_intro = [
@@ -95,16 +96,56 @@ const works = [
   }
 ]
 
-const skill = [
+const skills = [
   {
-      name: "Skill example",
-      img: "#"
+      name: "Blender",
+      icon: <SiBlender/>
   },
   {
-      name: "Skill example",
-      img: "#"
+      name: "Python",
+      icon: <SiPython/>
+  },
+  {
+      name: "Unity",
+      icon: <SiUnity/>
+  },
+  {
+      name: "Arduino",
+      icon: <SiArduino/>
+  },
+  {
+      name: "C++/ C",
+      icon: <SiCplusplus/>
+  },
+  {
+      name: "Processing",
+      icon: <SiProcessingfoundation/>
+  },
+  {
+    name: "RaspberryPI",
+    icon: <SiRaspberrypi/>
+  },
+  {
+    name: "JavaScript/ Node.js",
+    icon: <SiJavascript/>
+  },
+  {
+    name: "React",
+    icon: <SiReact/>
+  },
+  {
+    name: "Robotics",
+    icon: <BsRobot/>
+  },
+  {
+    name: "C#",
+    icon: <SiCsharp/>
+  },
+  {
+    name: "Bootstrap",
+    icon: <SiBootstrap/>
   }
-]
+];
 
 
 let Others = (content) =>{
@@ -130,7 +171,7 @@ root.render(
       <Header data={section}/>
       <Profile content={self_intro} id="top"/>
       <Works works={works}/>
-      <Skills skill={skill}/>
+      <Skills skills={skills}/>
       <Others content={{title:"Contact", link:"https://github.com/emor1", link_title:"GitHub", id:"contact", icon:<AiFillGithub/>}}/>
       <Others content={{title:"Blog", link:"#", link_title: "Blog Page",id:"blog"}}/>
     </main>

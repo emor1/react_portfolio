@@ -131,8 +131,8 @@ root.render(
       <Profile content={self_intro} id="top"/>
       <Works works={works}/>
       <Skills skill={skill}/>
-      <Others content={{title:"Contact", link:"https://github.com/emor1", link_title:"GitHub", id:"#contact", icon:<AiFillGithub/>}}/>
-      <Others content={{title:"Blog", link:"#", link_title: "Blog Page",id:"#blog"}}/>
+      <Others content={{title:"Contact", link:"https://github.com/emor1", link_title:"GitHub", id:"contact", icon:<AiFillGithub/>}}/>
+      <Others content={{title:"Blog", link:"#", link_title: "Blog Page",id:"blog"}}/>
     </main>
   </React.StrictMode>
 );

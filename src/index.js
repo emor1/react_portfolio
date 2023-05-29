@@ -48,16 +48,16 @@ const works = [
   {
     title: "CaTwitter",
     info: "ものづくり",
-    description: "説明",
     date:"2022-10-26",
-    detailed_description: "AAAAAAAAAAAAAAAAAA"
+    detailed_description: "AAAAAAAAAAAAAAAAAA",
+    img: `${process.env.PUBLIC_URL}/img/catwitter.JPG`
   },
   {
-    title: "作ったもの",
+    title: "バーチャルθ館",
     info: "カテゴリ",
-    description: "説明",
     date:"2022-10-26",
-    detailed_description: "BBBBBBBBBBBBBBBB"
+    detailed_description: "BBBBBBBBBBBBBBBB",
+    img: `${process.env.PUBLIC_URL}/img/theta4_3.jpg`
   },
   {
     title: "作ったもの",
@@ -86,6 +86,13 @@ const works = [
     description: "説明",
     date:"2022-10-26",
     detailed_description: "FFFFFF"
+  },
+  {
+    title: "作ったもの",
+    info: "カテゴリ",
+    description: "説明",
+    date:"2022-10-26",
+    detailed_description: "GGGGGG"
   },
   {
     title: "作ったもの",

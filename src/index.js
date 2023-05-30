@@ -54,31 +54,34 @@ const works = [
   },
   {
     title: "バーチャルθ館",
-    info: "カテゴリ",
+    info: "CG、メタバース",
     date:"2022-10-26",
     detailed_description: "BBBBBBBBBBBBBBBB",
     img: `${process.env.PUBLIC_URL}/img/theta4_3.jpg`
   },
   {
-    title: "作ったもの",
-    info: "カテゴリ",
+    title: "匂いの回路",
+    info: "ものづくり",
     description: "説明",
     date:"2022-10-26",
-    detailed_description: "CCCCCCCCCCCCCC"
+    detailed_description: "",
+    img: `${process.env.PUBLIC_URL}/img/nioi_kairo.png`
   },
   {
-    title: "作ったもの",
-    info: "カテゴリ",
+    title: "アニマトロニクスヘッド",
+    info: "ロボット",
     description: "説明",
     date:"2022-10-26",
-    detailed_description: "DDDDDDDDDDDDDDDDD"
+    detailed_description: "",
+    img: `${process.env.PUBLIC_URL}/img/animatronic_face.jpg`
   },
   {
-    title: "作ったもの",
-    info: "カテゴリ",
+    title: "AR年賀状",
+    info: "CG",
     description: "説明",
     date:"2022-10-26",
-    detailed_description: "EEEE"
+    detailed_description: "EEEE",
+    img: `${process.env.PUBLIC_URL}/img/AR4_3.jpg`
   },
   {
     title: "作ったもの",

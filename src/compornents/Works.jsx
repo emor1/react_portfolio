@@ -23,6 +23,8 @@ let SampleImage = (work) =>{
 let Works = (props) =>{
   let WorkImage = (works) =>{
     let work = works.work
+
+    // 画像があれば、画像を使ってサムネを返し、なければサムネを合成して返す
     if(work.img==null){
       console.log(work.title+" is null image")
       return(

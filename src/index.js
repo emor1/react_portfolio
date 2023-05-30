@@ -81,24 +81,24 @@ const works = [
     description: "説明",
     date:"2022-10-26",
     detailed_description: "EEEE",
-    img: `${process.env.PUBLIC_URL}/img/AR4_3.jpg`
+    img: `${process.env.PUBLIC_URL}/img/AR4_3.png`
   },
   {
-    title: "作ったもの",
+    title: "ARコン",
     info: "カテゴリ",
     description: "説明",
     date:"2022-10-26",
     detailed_description: "FFFFFF"
   },
   {
-    title: "作ったもの",
+    title: "生きる傘たち",
     info: "カテゴリ",
     description: "説明",
     date:"2022-10-26",
     detailed_description: "GGGGGG"
   },
   {
-    title: "作ったもの",
+    title: "しっぽ",
     info: "カテゴリ",
     description: "説明",
     date:"2022-10-26",
